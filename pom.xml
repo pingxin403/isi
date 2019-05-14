@@ -17,6 +17,9 @@
     <modules>
       <module>javaSDK</module>
       <module>devices</module>
+      <module>dao</module>
+      <module>service</module>
+      <module>web</module>
     </modules>
 
   <properties>
