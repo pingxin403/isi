@@ -1,7 +1,253 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>ISI</display-name>
+
+
+    <listener>
+        <listener-class>com.ujs.isi.web.WebListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>CountDeviceServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountDeviceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountStaffServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountStaffServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountTravelServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountTravelServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UseWeatherServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.UseWeatherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DataWeatherServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DataWeatherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DestinationServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DestinationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeviceServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DeviceServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TravelStaffServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.TravelStaffServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TravelWeatherServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.TravelWeatherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SettingServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.SettingServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeviceCo2DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DeviceCo2DataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountDeviceCo2DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountDeviceCo2DataServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeviceVocDataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DeviceVocDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountDeviceVocDataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountDeviceVocDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DevicePm25DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DevicePm25DataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountDevicePm25DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountDeviceVocDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DevicePm10DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.DevicePm10DataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountDevicePm10DataServlet</servlet-name>
+        <servlet-class>com.ujs.isi.web.CountDevicePM10DataServlet</servlet-class>
+    </servlet>
+
+    <!--首页-->
+    <servlet>
+        <servlet-name>main</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <!--用水用电量-->
+    <servlet>
+        <servlet-name>hydropower</servlet-name>
+        <jsp-file>/use.jsp</jsp-file>
+    </servlet>
+    <!--环境参数-->
+    <servlet>
+        <servlet-name>environmental</servlet-name>
+        <jsp-file>/env.jsp</jsp-file>
+    </servlet>
+    <!--出差信息-->
+    <servlet>
+        <servlet-name>evection</servlet-name>
+        <jsp-file>/travel.jsp</jsp-file>
+    </servlet>
+    <!--环境终端-->
+    <servlet>
+        <servlet-name>terminal</servlet-name>
+        <jsp-file>/terminal.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>time</servlet-name>
+        <jsp-file>/setting.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>time</servlet-name>
+        <url-pattern>/time</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>terminal</servlet-name>
+        <url-pattern>/terminal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>evection</servlet-name>
+        <url-pattern>/evection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>environmental</servlet-name>
+        <url-pattern>/environmental</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>hydropower</servlet-name>
+        <url-pattern>/hydropower</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>main</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+
+    <!--设备数量-->
+    <servlet-mapping>
+        <servlet-name>CountDeviceServlet</servlet-name>
+        <url-pattern>/device/count</url-pattern>
+    </servlet-mapping>
+    <!--返回设备-->
+    <servlet-mapping>
+        <servlet-name>DeviceServlet</servlet-name>
+        <url-pattern>/device</url-pattern>
+    </servlet-mapping>
+    <!--设置设备上传时间-->
+    <servlet-mapping>
+        <servlet-name>SettingServlet</servlet-name>
+        <url-pattern>/device/set</url-pattern>
+    </servlet-mapping>
+
+    <!--设备Co2数据数量-->
+    <servlet-mapping>
+        <servlet-name>CountDeviceCo2DataServlet</servlet-name>
+        <url-pattern>/device/data/co2/count</url-pattern>
+    </servlet-mapping>
+
+    <!--返回设备Co2数据-->
+    <servlet-mapping>
+        <servlet-name>DeviceCo2DataServlet</servlet-name>
+        <url-pattern>/device/data/co2</url-pattern>
+    </servlet-mapping>
+
+    <!--设备Voc数据数量-->
+    <servlet-mapping>
+        <servlet-name>CountDeviceVocDataServlet</servlet-name>
+        <url-pattern>/device/data/voc/count</url-pattern>
+    </servlet-mapping>
+
+    <!--返回设备Voc数据-->
+    <servlet-mapping>
+        <servlet-name>DeviceVocDataServlet</servlet-name>
+        <url-pattern>/device/data/voc</url-pattern>
+    </servlet-mapping>
+    <!--设备Pm25数据数量-->
+    <servlet-mapping>
+        <servlet-name>CountDevicePm25DataServlet</servlet-name>
+        <url-pattern>/device/data/pm25/count</url-pattern>
+    </servlet-mapping>
+
+    <!--返回设备Pm25数据-->
+    <servlet-mapping>
+        <servlet-name>DevicePm25DataServlet</servlet-name>
+        <url-pattern>/device/data/pm25</url-pattern>
+    </servlet-mapping>
+    <!--设备PM10数据数量-->
+    <servlet-mapping>
+        <servlet-name>CountDevicePm10DataServlet</servlet-name>
+        <url-pattern>/device/data/pm10/count</url-pattern>
+    </servlet-mapping>
+
+    <!--返回设备PM10数据-->
+    <servlet-mapping>
+        <servlet-name>DevicePm10DataServlet</servlet-name>
+        <url-pattern>/device/data/pm10</url-pattern>
+    </servlet-mapping>
+
+
+    <!--统计分析晴天、阴天、雨天的用水用电量对比图-->
+    <servlet-mapping>
+        <servlet-name>UseWeatherServlet</servlet-name>
+        <url-pattern>/weather/use</url-pattern>
+    </servlet-mapping>
+
+    <!--统计分析晴天、阴天、雨天的环境参数对比图-->
+    <servlet-mapping>
+        <servlet-name>DataWeatherServlet</servlet-name>
+        <url-pattern>/weather/data</url-pattern>
+    </servlet-mapping>
+
+    <!--比较不同天气情况的出差频次-->
+    <servlet-mapping>
+        <servlet-name>TravelWeatherServlet</servlet-name>
+        <url-pattern>/travel/weather</url-pattern>
+    </servlet-mapping>
+
+    <!--员工人数-->
+    <servlet-mapping>
+        <servlet-name>CountStaffServlet</servlet-name>
+        <url-pattern>/count/staff</url-pattern>
+    </servlet-mapping>
+    <!--查找出差最多的人-->
+    <servlet-mapping>
+        <servlet-name>TravelStaffServlet</servlet-name>
+        <url-pattern>/travel/staff</url-pattern>
+    </servlet-mapping>
+
+    <!--查找出差的目的地数目-->
+    <servlet-mapping>
+        <servlet-name>CountTravelServlet</servlet-name>
+        <url-pattern>/count/destination</url-pattern>
+    </servlet-mapping>
+    <!--查找出差最多的目的地-->
+    <servlet-mapping>
+        <servlet-name>DestinationServlet</servlet-name>
+        <url-pattern>/travel/destination</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>/main</welcome-file>
+    </welcome-file-list>
+
 </web-app>

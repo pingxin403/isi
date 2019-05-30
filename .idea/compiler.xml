@@ -6,12 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common" />
         <module name="dao" />
         <module name="devices" />
-        <module name="javaSDK" />
-        <module name="service" />
+        <module name="third" />
         <module name="web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javaSDK (1)" target="7" />
+      <module name="javaSDK (2)" target="7" />
+      <module name="service" target="7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
