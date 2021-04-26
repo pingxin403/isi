@@ -109,7 +109,7 @@
       <dependency>
           <groupId>commons-io</groupId>
           <artifactId>commons-io</artifactId>
-          <version>2.6</version>
+          <version>2.7</version>
       </dependency>
 
       <!-- Apache Commons DbUtils包是一组用于简化JDBC开发的Java实用程序类。-->
